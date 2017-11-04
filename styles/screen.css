@@ -629,7 +629,7 @@ header nav ul li:after {
 header nav ul li:last-child:after {
   content: '';
 }
-header .space {
+header #space {
   -webkit-animation: slide 30s linear infinite;
   -moz-animation: slide 30s linear infinite;
   -o-animation: slide 30s linear infinite;
@@ -712,14 +712,14 @@ main {
   word-break: normal;
   word-wrap: break-word;
 }
-main .cloud {
+main #cloud {
   background-image: url("../images/headers/sky3.jpg");
   -webkit-background-size: 100%;
   -moz-background-size: 100%;
   background-size: 100%;
   filter: grayscale(95%);
 }
-main .cloud:hover {
+main #cloud:hover {
   filter: grayscale(70%);
 }
 main a.article {
@@ -1020,7 +1020,24 @@ hr:after {
   -webkit-box-shadow: #010101 0 0 0 5px;
   box-shadow: #010101 0 0 0 5px;
 }
-@media (min-width: 720px) {
+@media (max-width: 899px) {
+  #space {
+    -webkit-animation: none;
+    -moz-animation: none;
+    -o-animation: none;
+    -ms-animation: none;
+    animation: none;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    background-size: 100%;
+  }
+  #cloud {
+    -webkit-background-size: auto 100%;
+    -moz-background-size: auto 100%;
+    background-size: auto 100%;
+  }
+}
+@media (min-width: 900px) {
   body {
     display: -webkit-box;
     display: -moz-box;
@@ -1047,9 +1064,6 @@ hr:after {
     text-align: center;
     padding: 40px;
     max-width: 350px;
-  }
-  body header .logo {
-    margin-right: 0;
   }
   body header nav ul {
     padding-top: 24px;
